@@ -1,0 +1,233 @@
+@import "./mixin";
+@import "./variable";
+header {
+    width: 87%;
+    margin: 0 auto;
+    padding-top: 2.5%;
+    & .nav {
+        @include screen();
+        & .nav__logo {
+            font-size: 40px;
+            color: $main_color;
+            & h1 {
+                animation-name: fade;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                margin-left: -10%;
+                margin-top: 5%;
+                // @include keyframes(fade) {
+                //     20% {
+                //         color: $main_color;
+                //     }
+                //     40% {
+                //         color: rgb(250, 100, 200);
+                //     }
+                //     60% {
+                //         color: $start-color;
+                //     }
+                //     80% {
+                //         color: rgba(171, 161, 100, 1);
+                //     }
+                //     100% {
+                //         color: rgb(246, 255, 0);
+                //     }
+                // }
+            }
+        }
+        & .nav__menu-pc {
+            & .nav__list {
+                width: 100%;
+                @include screen();
+                gap: 40px;
+                justify-content: start;
+                margin-left: 37%;
+                font-size: 18px;
+                padding-top: 25px;
+                & .nav__link {
+                    color: $font-small-color;
+                    &:hover {
+                        color: rgb(200, 100, 70);
+                    }
+                }
+            }
+        }
+        & .nav__sigin-btn {
+            width: 15%;
+            @include screen();
+            margin-left: 15%;
+            gap: 10%;
+            padding-left: 2%;
+            padding-top: 1%;
+            & li {
+                margin-top: 7%;
+                & .nav__sigin-link {
+                    color: $font-small-color;
+                    font-size: 18px;
+                    &:hover {
+                        color: $start-color;
+                        // font-size: 20px;
+                        margin-left: -1%;
+                        // position: relative;
+                    }
+                }
+            }
+            & button {
+                @include size(90px, 40px);
+                border-radius: 8px;
+                @include bgc($main_color);
+                border: hidden;
+                color: $light-white;
+                margin-top: -3%;
+                font-size: 18px;
+                &:hover {
+                    box-shadow: -1px 6px 20px -1px $main_color;
+                    @include size(90px, 45px);
+                    // position: relative;
+                }
+            }
+        }
+        & .check__toogle {
+            display: block;
+            @include screen(none);
+            &:checked ~ .nav__overlay {
+                @include screen(block);
+            }
+            &:checked ~ .nav__mobile {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+        }
+        & .nav__icon-mobile {
+            margin-right: 10%;
+            margin-top: 5%;
+            display: none;
+            & ion-icon {
+                @include size(30px);
+            }
+        }
+        & .nav__overlay {
+            @include size(100%, 100%);
+            @include screen(none);
+            position: absolute;
+            @include bgc(rgba(11, 11, 11, 0.577));
+            opacity: 1;
+            animation: faeIN linear 0.2s;
+        }
+        @include keyframes(faeIN) {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        & .nav__mobile {
+            position: absolute;
+            @include size(50%, 100%);
+            max-width: 100%;
+            transform: translateX(-120%);
+            transition: all linear 0.2s;
+            & .nav__logo-mobile {
+                @include size(auto, 40px);
+                & .h1 {
+                    animation-name: laxe;
+                    animation-duration: 10s;
+                    animation-iteration-count: infinite;
+                    @include keyframes(laxe) {
+                        0% {
+                            color: $light-white;
+                            font-size: 20px;
+                        }
+                        20% {
+                            color: $main_color;
+                            font-size: 30px;
+                        }
+                        40% {
+                            color: $font-big-color;
+                            font-size: 20px;
+                        }
+                        60% {
+                            color: $start-color;
+                            font-size: 30px;
+                        }
+                        80% {
+                            color: red;
+                            font-size: 20px;
+                        }
+                        100% {
+                            color: rgb(246, 255, 0);
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+            & .nav__menu-mobile {
+                @include line(5);
+                & .nav__list-mobile {
+                    text-align: center;
+                    & .nav__link-mobile {
+                        color: $font-small-color;
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+                & .nav__close-mobile {
+                    margin-right: 10%;
+                    & ion-icon {
+                        @include size(30px);
+                    }
+                }
+            }
+            & .nav__sigin-btn-mobile {
+                text-align: center;
+                & li {
+                    margin-top: 20px;
+
+                    & .nav__sigin-link-mobile {
+                        font-size: 20px;
+                        color: $font-small-color;
+                    }
+                }
+                & button {
+                    @include size(100%, 50px);
+                    margin-top: 30px;
+                    border-radius: 30px;
+                    font-size: 30px;
+                    color: $light-white;
+                    @include bgc($main_color);
+                    border: hidden;
+                    &:hover {
+                        box-shadow: -1px 6px 20px -1px $main_color;
+                    }
+                }
+            }
+        }
+        @include responsive-max(1380px) {
+            .nav__icon-mobile {
+                display: block;
+            }
+            .nav__menu-pc {
+                display: none;
+            }
+            .nav__sigin-btn {
+                display: none;
+            }
+            .nav__logo {
+                & h1 {
+                    margin-left: -10%;
+                }
+            }
+        }
+        @include responsive-max(600px) {
+            .nav__mobile {
+                height: 1000px;
+                position: absolute;
+            }
+            .nav__overlay {
+                height: 1000px;
+                position: absolute;
+            }
+        }
+    }
+}

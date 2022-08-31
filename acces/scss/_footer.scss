@@ -1,0 +1,201 @@
+@import "./mixin";
+@import "./variable";
+footer {
+    @include size(100%);
+    margin: 5% 0;
+    @include bgc($font-big-color);
+    & .bottom__top {
+        @include bgc($font-big-color);
+        margin-left: 10%;
+        @include screen();
+        & .bottom__top-left {
+            margin-top: 3%;
+            margin-left: 0;
+            @include bgc($font-big-color);
+            color: $font-small-color;
+            @include size(40%);
+            & h2 {
+                color: $light-white;
+                @include bgc($font-big-color);
+                font-size: 50px;
+            }
+            & .bottom__top-left__image {
+                @include bgc($font-big-color);
+                margin-top: 5%;
+            }
+            & p {
+                @include bgc($font-big-color);
+                margin-top: 5%;
+                width: 80%;
+                margin-left: 0%;
+            }
+            & .bottom__top-left__icon {
+                @include bgc($font-big-color);
+                & .bottom__top-left__icon_img {
+                    border-radius: 40px;
+                    margin-left: 5%;
+                    margin-top: 5%;
+                    &:hover {
+                        @include size(11%);
+                    }
+                }
+                & ion-icon {
+                    margin-left: 5%;
+                    @include bgc($font-big-color);
+                    font-size: 70px;
+                    color: $light-white;
+                }
+            }
+        }
+        & .bottom__top-right {
+            @include bgc($form);
+            margin-top: 5%;
+            margin-left: -5%;
+            border-radius: 15px;
+            & .bottom__top-right_logo {
+                @include bgc($form);
+                margin-top: 7%;
+                & img {
+                    @include bgc($form);
+                    margin-left: 40%;
+                }
+                & h2 {
+                    @include bgc($form);
+                    color: $light-white;
+                    margin-left: 30%;
+                    font-size: 35px;
+                }
+            }
+            & .bottom__top-right_form {
+                @include bgc($form);
+                padding: 2% 10%;
+                color: $light-white;
+                line-height: 2;
+                & span {
+                    @include bgc($form);
+                }
+                & input {
+                    width: 100%;
+                }
+                & #email {
+                    height: 30px;
+                    border-radius: 5px;
+                }
+                & #message {
+                    height: 70px;
+                    border-radius: 5px;
+                }
+            }
+            & button {
+                margin: 0% 10%;
+                border: hidden;
+                @include size(80%, 50px);
+                border-radius: 10px;
+                @include bgc($main_color);
+                font-size: 20px;
+                color: $light-white;
+                &:hover {
+                    box-shadow: -1px 6px 20px -1px $main_color;
+                }
+            }
+            & li {
+                margin-top: 0%;
+                text-align: end;
+                width: 80%;
+                @include bgc($form);
+                color: $font-small-color;
+            }
+        }
+    }
+    & .bottom__infor {
+        @include bgc($font-big-color);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        // margin-left: 2%;
+        margin-top: 7%;
+        line-height: 2;
+        height: 300px;
+
+        & .bottom__infor-iterm {
+            @include bgc($font-big-color);
+            color: $light-white;
+            & h4 {
+                @include bgc($font-big-color);
+            }
+            & li {
+                @include bgc($font-big-color);
+                color: $font-small-color;
+                &:hover {
+                    color: $start-color;
+                }
+            }
+        }
+    }
+    @include responsive-max(1240px) {
+        .bottom__top {
+            flex-direction: column;
+            @include size(100%, 950px);
+            margin-left: 0%;
+            & .bottom__top-left {
+                @include size(95%, auto);
+                margin-left: 5%;
+                & h2 {
+                    font-size: 30px;
+                }
+                & .bottom__top-left__image {
+                    margin-left: 40%;
+                }
+                & p {
+                    width: 90%;
+                    font-size: 15px;
+                }
+                & .bottom__top-left__icon {
+                    height: 100px;
+                    & ion-icon {
+                        font-size: 50px;
+                        color: $light-white;
+                    }
+                    & .bottom__top-left__icon_img {
+                        @include size(50px);
+                        &:hover {
+                            @include size(55px);
+                            position: static;
+                        }
+                    }
+                }
+            }
+            & .bottom__top-right {
+                @include size(90%, 650px);
+                margin-left: 5%;
+                text-align: center;
+                & .bottom__top-right_logo {
+                    & img {
+                        margin-left: 0%;
+                    }
+                    & h2 {
+                        margin-left: 0%;
+                    }
+                }
+                // & .bottom__top-right_form {
+                //     padding: 5%;
+                // }
+                & button {
+                    margin-top: 10%;
+                }
+                & li{
+                    padding-top: 3%;
+                }
+            }
+        }
+        & .bottom__infor {
+            @include bgc($font-big-color);
+            margin: 0%;
+            height: 367px;
+
+            & .bottom__infor-iterm {
+                margin-left: 20%;
+                margin-top: 30%;
+            }
+        }
+    }
+}

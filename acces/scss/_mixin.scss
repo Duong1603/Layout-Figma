@@ -1,0 +1,43 @@
+@mixin bgc($bgc: #f5f5f5) {
+    background-color: $bgc;
+}
+@mixin fontsize {
+    // font-family: "Inter", sans-serif;
+    font-style: none;
+    list-style: none;
+    font-weight: 700px;
+    text-decoration: none;
+}
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin screen($layout: flex) {
+    display: $layout;
+    flex-direction: row;
+}
+@mixin line($l: 1) {
+    line-height: $l;
+}
+@mixin responsive-max($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+@mixin space($top: 0, $left: 0, $bottom: 0, $right: 0) {
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+@mixin responsive-min($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+    

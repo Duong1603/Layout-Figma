@@ -1,0 +1,14 @@
+@import "./mixin";
+@import "./variable";
+* {
+    @include bgc($light-white);
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    @include fontsize();
+    @include bgc($light-white);
+    font-family: "Inter", sans-serif;
+}
+@import "./header";
+@import "./content";
+@import "./footer";

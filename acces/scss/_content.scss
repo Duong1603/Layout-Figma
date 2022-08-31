@@ -1,0 +1,354 @@
+@import "./mixin";
+@import "./variable";
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2.5%;
+    // padding-left: 5%;
+    & .product {
+        margin-top: 3%;
+        @include screen();
+        & .product__word {
+            width: 50%;
+            margin-top: 5.5%;
+            & h1 {
+                @include line(1);
+                font-size: 80px;
+            }
+            & p {
+                width: 70%;
+                padding-top: 15%;
+                font-size: 18px;
+                margin-left: 0%;
+            }
+            & .product__word-watch {
+                @include screen();
+                margin-top: 25px;
+                & button {
+                    margin-left: 0;
+                    margin-top: 30px;
+                    @include size(120px, 40px);
+                    border-radius: 20px;
+                    @include bgc($main_color);
+                    border: hidden;
+                    color: $light-white;
+                    font-size: 18px;
+                    &:hover {
+                        box-shadow: -1px 6px 20px -1px $main_color;
+                        // @include size(100px, 50px);
+                        // font-size: 18px;
+                    }
+                }
+                & .product__word-icon {
+                    @include screen();
+                    gap: 20px;
+                    justify-content: end;
+                    margin-left: -40%;
+                    margin-top: 30px;
+                    position: relative;
+                    & ion-icon {
+                        @include size(40px);
+                    }
+                    & li {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        & .product__images {
+            width: 50%;
+            justify-content: flex-start;
+            & .product__images-person {
+                @include size(97%, 80%);
+                margin-top: 10%;
+            }
+        }
+    }
+    @include responsive-max(1250px) {
+        .product {
+            flex-direction: column;
+            padding: 0%;
+            margin: 0;
+            & .product__word {
+                order: 2;
+                @include size(100%);
+                & h1 {
+                    font-size: 300%;
+                }
+                & p {
+                    @include size(100%, auto);
+                    font-size: 100%;
+                }
+                & .product__word-watch {
+                    & .product__word-icon {
+                        @include size(50%);
+                        margin-left: 0%;
+                        align-self: start;
+                        position: initial;
+                        & ion-icon {
+                            position: sticky;
+                        }
+                    }
+                }
+            }
+            & .product__images {
+                @include size(100%);
+                margin: 0;
+                padding: 0;
+                & .product__images-person {
+                    @include size(125%, 100%);
+                    margin-left: -30%;
+                }
+            }
+        }
+    }
+    & .collabs {
+        margin-top: 10%;
+        text-align: center;
+        & h1 {
+            font-size: 50px;
+            font-weight: 600;
+            opacity: 1;
+        }
+        & .collabs-image {
+            margin: 5% 0%;
+            opacity: 1;
+            @include size(100%, 100%);
+            // height: 40px;
+        }
+    }
+    @include responsive-max(1250px) {
+        .collabs {
+            h1 {
+                font-size: 26px;
+                font-weight: 600;
+            }
+            & .collabs-image {
+                @include size(100%, 20px);
+                // width: 100%;
+                // height: 20px;
+            }
+        }
+    }
+    & .aboutus {
+        margin-top: 5%;
+        @include screen();
+        font-size: 20px;
+        @include size(100%, auto);
+        & .aboutus__left {
+            & h2 {
+                @include size(80%, auto);
+                font-size: 50px;
+                opacity: 1;
+                margin-left: 0%;
+            }
+            & p {
+                @include size(90%, auto);
+                margin-top: 10%;
+                color: $font-small-color;
+                margin-left: 0%;
+            }
+            & .aboutus__left-evaluate {
+                margin-top: 10%;
+                @include screen();
+                align-self: start;
+                & .aboutus__left-evaluate__left {
+                    margin-left: 0%;
+                    line-height: 2;
+                    & .aboutus__left-evaluate--icon {
+                        & ion-icon {
+                            color: $start-color;
+                        }
+                    }
+                }
+                & .aboutus__left-evaluate__right {
+                    margin-left: -30%;
+                    line-height: 2;
+                    & .aboutus__left-evaluate--icon {
+                        & ion-icon {
+                            color: $start-color;
+                        }
+                    }
+                }
+            }
+        }
+        & .aboutus__right {
+            & .aboutus__right-iterm {
+                @include screen();
+                gap: 5%;
+                padding-bottom: 15%;
+                & img {
+                    @include size(40px);
+                    padding-top: 2%;
+                    background-color: $light-white;
+                }
+                & .aboutus__right-iterm__word {
+                    & h3 {
+                        font-size: 30px;
+                        padding-bottom: 4%;
+                    }
+                    & p {
+                        color: $font-small-color;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive-max(1024px) {
+        .aboutus {
+            background-color: $font-small-color;
+            flex-direction: column;
+            & .aboutus__left {
+                text-align: center;
+                & h2 {
+                    @include size(100%, auto);
+                    font-size: 30px;
+                    opacity: 1;
+                }
+                & p {
+                    @include size(100%, auto);
+                    font-size: 15px;
+                    margin-top: 5%;
+                }
+                & .aboutus__left-evaluate {
+                    margin-top: 5%;
+                    & .aboutus__left-evaluate__left {
+                        margin-left: 5%;
+                        & h3 {
+                            font-size: 20px;
+                        }
+                        & h4 {
+                            font-size: 15px;
+                        }
+                    }
+                    & .aboutus__left-evaluate__right {
+                        margin-left: 0%;
+                        font-size: 20px;
+                        & h3 {
+                            font-size: 20px;
+                        }
+                        & h4 {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            & .aboutus__right {
+                & .aboutus__right-iterm {
+                    flex-direction: column;
+                    text-align: center;
+                    & img {
+                        @include size(30%);
+                    }
+                    & .aboutus__right-iterm__word {
+                        & .h3 {
+                            font-size: 20px;
+                        }
+                        & .p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive-min(300px) {
+        .aboutus__left-evaluate {
+            & .aboutus__left-evaluate__left {
+                margin-left: 0%;
+            }
+        }
+    }
+    & .blogs {
+        margin-top: 5%;
+        & .blogs__top {
+            display: grid;
+            grid-template-columns: 1fr 2fr 0.5fr;
+            & h2 {
+                font-size: 50px;
+            }
+            & p {
+                text-align: left;
+                width: 70%;
+                font-size: 20px;
+                color: $font-small-color;
+            }
+            & .blogs__top-button {
+                margin-right: 30%;
+                & button {
+                    @include size(150px, 50px);
+                    border-radius: 40px;
+                    font-size: 20px;
+                    color: $light-white;
+                    @include bgc($main_color);
+                    border: hidden;
+                    &:hover {
+                        box-shadow: -1px 6px 20px -1px $main_color;
+                    }
+                }
+            }
+        }
+        & .blogs__bottom {
+            @include screen();
+            gap: 5%;
+            margin-top: 5%;
+            & .blogs__bottom-iterm {
+                text-align: center;
+                & img {
+                    @include size(90%, 350px);
+                }
+                & h3 {
+                    margin-top: 3%;
+                    font-size: 25px;
+                    opacity: 1;
+                }
+                & p {
+                    font-size: 18px;
+                    margin-top: 5%;
+                    color: $font-small-color;
+                }
+            }
+        }
+    }
+    @include responsive-max(1024px) {
+        .blogs {
+            & .blogs__top {
+                @include screen();
+                flex-direction: column;
+                text-align: center;
+                & h2 {
+                    font-size: 35px;
+                }
+                & p {
+                    margin-top: 5%;
+                    width: 100%;
+                    font-size: 18px;
+                }
+                & .blogs__top-button {
+                    margin-top: 5%;
+                    @include size(100%, 50px);
+                    & button {
+                        @include size(100%, 50px);
+                    }
+                }
+            }
+            & .blogs__bottom {
+                margin-top: 5%;
+                flex-direction: column;
+                & .blogs__bottom-iterm {
+                    text-align: center;
+                    margin-top: 10%;
+                    & img {
+                        @include size(70%, 250px);
+                    }
+                    & h3 {
+                        font-size: 20px;
+                    }
+                    & p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
