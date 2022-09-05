@@ -6,29 +6,34 @@ main {
     padding-top: 2.5%;
     // padding-left: 5%;
     & .product {
-        margin-top: 3%;
+        margin-top: 2%;
         @include screen();
         & .product__word {
             width: 50%;
-            margin-top: 5.5%;
+            margin-top: 3%;
+            margin-left: 1.7%;
             & h1 {
                 @include line(1);
                 font-size: 80px;
+                line-height: 90px;
+                font-weight: 800;
+                letter-spacing: 0.8px;
             }
             & p {
-                width: 70%;
-                padding-top: 15%;
+                width: 80%;
+                padding-top: 18%;
                 font-size: 18px;
-                margin-left: 0%;
+                margin-left: -0.5%;
+                line-height: calc(30px / 18px);
             }
             & .product__word-watch {
                 @include screen();
                 margin-top: 25px;
                 & button {
                     margin-left: 0;
-                    margin-top: 30px;
-                    @include size(120px, 40px);
-                    border-radius: 20px;
+                    margin-top: 25px;
+                    @include size(165px, 62px);
+                    border-radius: 30px;
                     @include bgc($main_color);
                     border: hidden;
                     color: $light-white;
@@ -41,11 +46,12 @@ main {
                 }
                 & .product__word-icon {
                     @include screen();
-                    gap: 20px;
+                    gap: 14px;
                     justify-content: end;
-                    margin-left: -40%;
-                    margin-top: 30px;
+                    margin-left: -34%;
+                    margin-top: 33px;
                     position: relative;
+                    font-size: 18px;
                     & ion-icon {
                         @include size(40px);
                     }
@@ -59,8 +65,9 @@ main {
             width: 50%;
             justify-content: flex-start;
             & .product__images-person {
-                @include size(97%, 80%);
-                margin-top: 10%;
+                @include size(96%, 85%);
+                margin-top: 6%;
+                margin-left: -7%;
             }
         }
     }
@@ -106,14 +113,18 @@ main {
         margin-top: 10%;
         text-align: center;
         & h1 {
-            font-size: 50px;
-            font-weight: 600;
-            opacity: 1;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48.41px;
+            text-align: center;
+            margin-top: 128px;
+            letter-spacing: 0.5px;
         }
         & .collabs-image {
             margin: 5% 0%;
             opacity: 1;
-            @include size(100%, 100%);
+            @include size(93%, 100%);
+            margin-left: -4%;
             // height: 40px;
         }
     }
@@ -131,64 +142,89 @@ main {
         }
     }
     & .aboutus {
-        margin-top: 5%;
+        margin-top: 10%;
+        margin-left: 20px;
         @include screen();
         font-size: 20px;
         @include size(100%, auto);
         & .aboutus__left {
             & h2 {
-                @include size(80%, auto);
+                @include size(90%, auto);
                 font-size: 50px;
                 opacity: 1;
                 margin-left: 0%;
             }
             & p {
-                @include size(90%, auto);
-                margin-top: 10%;
+                @include size(93%, auto);
+                margin-top: 4.5%;
                 color: $font-small-color;
                 margin-left: 0%;
+                font-size: 16px;
+                line-height: calc(30px / 16px);
             }
             & .aboutus__left-evaluate {
-                margin-top: 10%;
+                margin-top: 9.5%;
                 @include screen();
                 align-self: start;
                 & .aboutus__left-evaluate__left {
                     margin-left: 0%;
-                    line-height: 2;
+                    margin-top: 1%;
+                    display: inline-block;
                     & .aboutus__left-evaluate--icon {
                         & ion-icon {
                             color: $start-color;
+                            @include size(23px, 23px);
                         }
+                    }
+                    & h3 {
+                        padding: 18px 0px;
+                        font-size: 18px;
                     }
                 }
                 & .aboutus__left-evaluate__right {
-                    margin-left: -30%;
-                    line-height: 2;
+                    margin-left: -36%;
+                    // margin-top: -1%;
+                    display: inline-block;
+                    margin-top: 1%;
+
                     & .aboutus__left-evaluate--icon {
                         & ion-icon {
                             color: $start-color;
+                            @include size(23px, 23px);
                         }
+                    }
+                    & h3 {
+                        padding: 18px 0px;
+                        font-size: 18px;
                     }
                 }
             }
         }
         & .aboutus__right {
             & .aboutus__right-iterm {
+                margin-left: -2%;
                 @include screen();
-                gap: 5%;
+                gap: 7%;
                 padding-bottom: 15%;
                 & img {
-                    @include size(40px);
-                    padding-top: 2%;
+                    @include size(43px);
+                    padding-top: 3%;
                     background-color: $light-white;
                 }
                 & .aboutus__right-iterm__word {
                     & h3 {
-                        font-size: 30px;
-                        padding-bottom: 4%;
+                        font-size: 28px;
+                        padding-bottom: 2%;
+                        letter-spacing: 0.7px;
+                        margin-left: 3px;
                     }
                     & p {
+                        width: 100%;
                         color: $font-small-color;
+                        line-height: calc(30px / 18px);
+                        font-size: 18px;
+                        letter-spacing: 0.8px;
+                        // margin-left: 1px;
                     }
                 }
             }
@@ -260,25 +296,33 @@ main {
         }
     }
     & .blogs {
-        margin-top: 5%;
+        margin-top: 6%;
         & .blogs__top {
             display: grid;
             grid-template-columns: 1fr 2fr 0.5fr;
             & h2 {
                 font-size: 50px;
+                margin-left: 4%;
+                letter-spacing: 0.8px;
             }
             & p {
                 text-align: left;
-                width: 70%;
-                font-size: 20px;
+                width: 67%;
+                font-size: 18px;
                 color: $font-small-color;
+                line-height: calc(30 / 18);
+                margin-top: 18px;
+                margin-left: 113px;
             }
             & .blogs__top-button {
-                margin-right: 30%;
+                // margin-right: 35%;
                 & button {
-                    @include size(150px, 50px);
+                    position: relative;
+                    margin-left: -8%;
+                    margin-top: 18%;
+                    @include size(162px, 66px);
                     border-radius: 40px;
-                    font-size: 20px;
+                    font-size: 18px;
                     color: $light-white;
                     @include bgc($main_color);
                     border: hidden;
@@ -290,22 +334,26 @@ main {
         }
         & .blogs__bottom {
             @include screen();
-            gap: 5%;
-            margin-top: 5%;
+            gap: 44px;
+            margin-top: 6%;
+            margin-left: 15px;
             & .blogs__bottom-iterm {
-                text-align: center;
                 & img {
-                    @include size(90%, 350px);
+                    @include size(364px 430px);
                 }
                 & h3 {
-                    margin-top: 3%;
-                    font-size: 25px;
-                    opacity: 1;
+                    // font-weight: 600;
+                    font-size: 30px;
+                    margin-top: 25px;
+                    margin-left: 2px;
+                    letter-spacing: 1;
                 }
                 & p {
                     font-size: 18px;
                     margin-top: 5%;
                     color: $font-small-color;
+                    line-height: calc(30 / 18);
+                    
                 }
             }
         }

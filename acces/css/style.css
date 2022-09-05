@@ -14,13 +14,14 @@
 header {
   width: 87%;
   margin: 0 auto;
-  padding-top: 2.5%;
+  padding-top: 3%;
 }
 header .nav {
   display: flex;
   flex-direction: row;
 }
 header .nav .nav__logo {
+  font-weight: 600;
   font-size: 40px;
   color: #37b182;
 }
@@ -28,18 +29,21 @@ header .nav .nav__logo h1 {
   animation-name: fade;
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  margin-left: -10%;
+  margin-left: -17%;
   margin-top: 5%;
+  letter-spacing: 2px;
+  color: #37b182;
 }
 header .nav .nav__menu-pc .nav__list {
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 45px;
   justify-content: start;
-  margin-left: 37%;
-  font-size: 18px;
-  padding-top: 25px;
+  margin-left: 3%;
+  font-size: 16px;
+  padding-top: 33px;
+  position: relative;
 }
 header .nav .nav__menu-pc .nav__list .nav__link {
   color: #a6a6a6;
@@ -51,21 +55,19 @@ header .nav .nav__sigin-btn {
   width: 15%;
   display: flex;
   flex-direction: row;
-  margin-left: 15%;
-  gap: 10%;
-  padding-left: 2%;
-  padding-top: 1%;
+  margin-left: 0%;
+  padding-top: 1.2%;
 }
 header .nav .nav__sigin-btn li {
   margin-top: 7%;
+  margin-left: 12%;
 }
 header .nav .nav__sigin-btn li .nav__sigin-link {
   color: #a6a6a6;
-  font-size: 18px;
+  font-size: 16px;
 }
 header .nav .nav__sigin-btn li .nav__sigin-link:hover {
   color: #ffc728;
-  margin-left: -1%;
 }
 header .nav .nav__sigin-btn button {
   width: 90px;
@@ -74,13 +76,11 @@ header .nav .nav__sigin-btn button {
   background-color: #37b182;
   border: hidden;
   color: #f8f8fa;
-  margin-top: -3%;
+  margin-left: 10%;
   font-size: 18px;
 }
 header .nav .nav__sigin-btn button:hover {
   box-shadow: -1px 6px 20px -1px #37b182;
-  width: 90px;
-  height: 45px;
 }
 header .nav .check__toogle {
   display: block;
@@ -238,23 +238,28 @@ main {
   padding-top: 2.5%;
 }
 main .product {
-  margin-top: 3%;
+  margin-top: 2%;
   display: flex;
   flex-direction: row;
 }
 main .product .product__word {
   width: 50%;
-  margin-top: 5.5%;
+  margin-top: 3%;
+  margin-left: 1.7%;
 }
 main .product .product__word h1 {
   line-height: 1;
   font-size: 80px;
+  line-height: 90px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
 }
 main .product .product__word p {
-  width: 70%;
-  padding-top: 15%;
+  width: 80%;
+  padding-top: 18%;
   font-size: 18px;
-  margin-left: 0%;
+  margin-left: -0.5%;
+  line-height: 1.6666666667;
 }
 main .product .product__word .product__word-watch {
   display: flex;
@@ -263,10 +268,10 @@ main .product .product__word .product__word-watch {
 }
 main .product .product__word .product__word-watch button {
   margin-left: 0;
-  margin-top: 30px;
-  width: 120px;
-  height: 40px;
-  border-radius: 20px;
+  margin-top: 25px;
+  width: 165px;
+  height: 62px;
+  border-radius: 30px;
   background-color: #37b182;
   border: hidden;
   color: #f8f8fa;
@@ -278,11 +283,12 @@ main .product .product__word .product__word-watch button:hover {
 main .product .product__word .product__word-watch .product__word-icon {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 14px;
   justify-content: end;
-  margin-left: -40%;
-  margin-top: 30px;
+  margin-left: -34%;
+  margin-top: 33px;
   position: relative;
+  font-size: 18px;
 }
 main .product .product__word .product__word-watch .product__word-icon ion-icon {
   width: 40px;
@@ -296,9 +302,10 @@ main .product .product__images {
   justify-content: flex-start;
 }
 main .product .product__images .product__images-person {
-  width: 97%;
-  height: 80%;
-  margin-top: 10%;
+  width: 96%;
+  height: 85%;
+  margin-top: 6%;
+  margin-left: -7%;
 }
 @media screen and (max-width: 1250px) {
   main .product {
@@ -346,15 +353,19 @@ main .collabs {
   text-align: center;
 }
 main .collabs h1 {
-  font-size: 50px;
-  font-weight: 600;
-  opacity: 1;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48.41px;
+  text-align: center;
+  margin-top: 128px;
+  letter-spacing: 0.5px;
 }
 main .collabs .collabs-image {
   margin: 5% 0%;
   opacity: 1;
-  width: 100%;
+  width: 93%;
   height: 100%;
+  margin-left: -4%;
 }
 @media screen and (max-width: 1250px) {
   main .collabs h1 {
@@ -367,7 +378,8 @@ main .collabs .collabs-image {
   }
 }
 main .aboutus {
-  margin-top: 5%;
+  margin-top: 10%;
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
   font-size: 20px;
@@ -375,57 +387,80 @@ main .aboutus {
   height: auto;
 }
 main .aboutus .aboutus__left h2 {
-  width: 80%;
+  width: 90%;
   height: auto;
   font-size: 50px;
   opacity: 1;
   margin-left: 0%;
 }
 main .aboutus .aboutus__left p {
-  width: 90%;
+  width: 93%;
   height: auto;
-  margin-top: 10%;
+  margin-top: 4.5%;
   color: #a6a6a6;
   margin-left: 0%;
+  font-size: 16px;
+  line-height: 1.875;
 }
 main .aboutus .aboutus__left .aboutus__left-evaluate {
-  margin-top: 10%;
+  margin-top: 9.5%;
   display: flex;
   flex-direction: row;
   align-self: start;
 }
 main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__left {
   margin-left: 0%;
-  line-height: 2;
+  margin-top: 1%;
+  display: inline-block;
 }
 main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__left .aboutus__left-evaluate--icon ion-icon {
   color: #ffc728;
+  width: 23px;
+  height: 23px;
+}
+main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__left h3 {
+  padding: 18px 0px;
+  font-size: 18px;
 }
 main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__right {
-  margin-left: -30%;
-  line-height: 2;
+  margin-left: -36%;
+  display: inline-block;
+  margin-top: 1%;
 }
 main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__right .aboutus__left-evaluate--icon ion-icon {
   color: #ffc728;
+  width: 23px;
+  height: 23px;
+}
+main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__right h3 {
+  padding: 18px 0px;
+  font-size: 18px;
 }
 main .aboutus .aboutus__right .aboutus__right-iterm {
+  margin-left: -2%;
   display: flex;
   flex-direction: row;
-  gap: 5%;
+  gap: 7%;
   padding-bottom: 15%;
 }
 main .aboutus .aboutus__right .aboutus__right-iterm img {
-  width: 40px;
-  height: 40px;
-  padding-top: 2%;
+  width: 43px;
+  height: 43px;
+  padding-top: 3%;
   background-color: #f8f8fa;
 }
 main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word h3 {
-  font-size: 30px;
-  padding-bottom: 4%;
+  font-size: 28px;
+  padding-bottom: 2%;
+  letter-spacing: 0.7px;
+  margin-left: 3px;
 }
 main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word p {
+  width: 100%;
   color: #a6a6a6;
+  line-height: 1.6666666667;
+  font-size: 18px;
+  letter-spacing: 0.8px;
 }
 @media screen and (max-width: 1024px) {
   main .aboutus {
@@ -490,7 +525,7 @@ main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word 
   }
 }
 main .blogs {
-  margin-top: 5%;
+  margin-top: 6%;
 }
 main .blogs .blogs__top {
   display: grid;
@@ -498,21 +533,26 @@ main .blogs .blogs__top {
 }
 main .blogs .blogs__top h2 {
   font-size: 50px;
+  margin-left: 4%;
+  letter-spacing: 0.8px;
 }
 main .blogs .blogs__top p {
   text-align: left;
-  width: 70%;
-  font-size: 20px;
+  width: 67%;
+  font-size: 18px;
   color: #a6a6a6;
-}
-main .blogs .blogs__top .blogs__top-button {
-  margin-right: 30%;
+  line-height: 1.6666666667;
+  margin-top: 18px;
+  margin-left: 113px;
 }
 main .blogs .blogs__top .blogs__top-button button {
-  width: 150px;
-  height: 50px;
+  position: relative;
+  margin-left: -8%;
+  margin-top: 18%;
+  width: 162px;
+  height: 66px;
   border-radius: 40px;
-  font-size: 20px;
+  font-size: 18px;
   color: #f8f8fa;
   background-color: #37b182;
   border: hidden;
@@ -523,25 +563,25 @@ main .blogs .blogs__top .blogs__top-button button:hover {
 main .blogs .blogs__bottom {
   display: flex;
   flex-direction: row;
-  gap: 5%;
-  margin-top: 5%;
-}
-main .blogs .blogs__bottom .blogs__bottom-iterm {
-  text-align: center;
+  gap: 44px;
+  margin-top: 6%;
+  margin-left: 15px;
 }
 main .blogs .blogs__bottom .blogs__bottom-iterm img {
-  width: 90%;
-  height: 350px;
+  width: 364px 430px;
+  height: 364px 430px;
 }
 main .blogs .blogs__bottom .blogs__bottom-iterm h3 {
-  margin-top: 3%;
-  font-size: 25px;
-  opacity: 1;
+  font-size: 30px;
+  margin-top: 25px;
+  margin-left: 2px;
+  letter-spacing: 1;
 }
 main .blogs .blogs__bottom .blogs__bottom-iterm p {
   font-size: 18px;
   margin-top: 5%;
   color: #a6a6a6;
+  line-height: 1.6666666667;
 }
 @media screen and (max-width: 1024px) {
   main .blogs .blogs__top {
