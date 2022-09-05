@@ -207,9 +207,15 @@ main {
                 gap: 7%;
                 padding-bottom: 15%;
                 & img {
-                    @include size(43px);
+                    @include size(45px);
                     padding-top: 3%;
                     background-color: $light-white;
+                }
+                & #analytics {
+                    margin: -45px -5px;
+                }
+                & #engagement {
+                    margin: -45px 0px;
                 }
                 & .aboutus__right-iterm__word {
                     & h3 {
@@ -240,16 +246,18 @@ main {
                     @include size(100%, auto);
                     font-size: 30px;
                     opacity: 1;
+                    margin-left: -15px;
                 }
                 & p {
                     @include size(100%, auto);
                     font-size: 15px;
                     margin-top: 5%;
+                    margin-left: -15px;
                 }
                 & .aboutus__left-evaluate {
                     margin-top: 5%;
+                    margin-left: -10px;
                     & .aboutus__left-evaluate__left {
-                        margin-left: 5%;
                         & h3 {
                             font-size: 20px;
                         }
@@ -273,8 +281,15 @@ main {
                 & .aboutus__right-iterm {
                     flex-direction: column;
                     text-align: center;
+                    margin-left: -40px;
                     & img {
-                        @include size(30%);
+                        @include size(30%, 100px);
+                    }
+                    & #analytics {
+                        margin: 45px 120px;
+                    }
+                    & #engagement {
+                        margin: 45px 120px;
                     }
                     & .aboutus__right-iterm__word {
                         & .h3 {
@@ -353,7 +368,6 @@ main {
                     margin-top: 5%;
                     color: $font-small-color;
                     line-height: calc(30 / 18);
-                    
                 }
             }
         }
@@ -366,15 +380,17 @@ main {
                 text-align: center;
                 & h2 {
                     font-size: 35px;
+                    margin-left: 5px;
                 }
                 & p {
                     margin-top: 5%;
-                    width: 100%;
+                    width: 95%;
                     font-size: 18px;
+                    margin-left: 8px;
                 }
                 & .blogs__top-button {
                     margin-top: 5%;
-                    @include size(100%, 50px);
+                    @include size(107%, 50px);
                     & button {
                         @include size(100%, 50px);
                     }

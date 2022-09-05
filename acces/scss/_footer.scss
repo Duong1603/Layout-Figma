@@ -1,7 +1,7 @@
 @import "./mixin";
 @import "./variable";
 footer {
-    @include size(100%, 1217px);
+    @include size(100%);
     margin: 115px 0;
     @include bgc($font-big-color);
     & .bottom__top {
@@ -90,11 +90,11 @@ footer {
                 }
                 & #email {
                     height: 50px;
-                    border-radius: 5px;
+                    border-radius: 20px;
                 }
                 & #message {
                     height: 80px;
-                    border-radius: 5px;
+                    border-radius: 20px;
                     margin-top: 5%;
                 }
             }
@@ -147,6 +147,9 @@ footer {
         }
     }
     @include responsive-max(1240px) {
+        footer {
+            @include size(100%, 1000px);
+        }
         .bottom__top {
             flex-direction: column;
             @include size(100%, 950px);
@@ -191,9 +194,9 @@ footer {
                         margin-left: 0%;
                     }
                 }
-                // & .bottom__top-right_form {
-                //     padding: 5%;
-                // }
+                & .bottom__top-right_form {
+                    @include size(330px, 250px);
+                }
                 & button {
                     margin-top: 10%;
                 }
@@ -204,12 +207,11 @@ footer {
         }
         & .bottom__infor {
             @include bgc($font-big-color);
-            margin: 0%;
-            height: 367px;
-
+            margin: 70% 0%;
             & .bottom__infor-iterm {
                 margin-left: 20%;
                 margin-top: 30%;
+                font-size: 12px;
             }
         }
     }

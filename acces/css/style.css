@@ -444,10 +444,16 @@ main .aboutus .aboutus__right .aboutus__right-iterm {
   padding-bottom: 15%;
 }
 main .aboutus .aboutus__right .aboutus__right-iterm img {
-  width: 43px;
-  height: 43px;
+  width: 45px;
+  height: 45px;
   padding-top: 3%;
   background-color: #f8f8fa;
+}
+main .aboutus .aboutus__right .aboutus__right-iterm #analytics {
+  margin: -45px -5px;
+}
+main .aboutus .aboutus__right .aboutus__right-iterm #engagement {
+  margin: -45px 0px;
 }
 main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word h3 {
   font-size: 28px;
@@ -475,18 +481,18 @@ main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word 
     height: auto;
     font-size: 30px;
     opacity: 1;
+    margin-left: -15px;
   }
   main .aboutus .aboutus__left p {
     width: 100%;
     height: auto;
     font-size: 15px;
     margin-top: 5%;
+    margin-left: -15px;
   }
   main .aboutus .aboutus__left .aboutus__left-evaluate {
     margin-top: 5%;
-  }
-  main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__left {
-    margin-left: 5%;
+    margin-left: -10px;
   }
   main .aboutus .aboutus__left .aboutus__left-evaluate .aboutus__left-evaluate__left h3 {
     font-size: 20px;
@@ -507,10 +513,17 @@ main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word 
   main .aboutus .aboutus__right .aboutus__right-iterm {
     flex-direction: column;
     text-align: center;
+    margin-left: -40px;
   }
   main .aboutus .aboutus__right .aboutus__right-iterm img {
     width: 30%;
-    height: 30%;
+    height: 100px;
+  }
+  main .aboutus .aboutus__right .aboutus__right-iterm #analytics {
+    margin: 45px 120px;
+  }
+  main .aboutus .aboutus__right .aboutus__right-iterm #engagement {
+    margin: 45px 120px;
   }
   main .aboutus .aboutus__right .aboutus__right-iterm .aboutus__right-iterm__word .h3 {
     font-size: 20px;
@@ -592,15 +605,17 @@ main .blogs .blogs__bottom .blogs__bottom-iterm p {
   }
   main .blogs .blogs__top h2 {
     font-size: 35px;
+    margin-left: 5px;
   }
   main .blogs .blogs__top p {
     margin-top: 5%;
-    width: 100%;
+    width: 95%;
     font-size: 18px;
+    margin-left: 8px;
   }
   main .blogs .blogs__top .blogs__top-button {
     margin-top: 5%;
-    width: 100%;
+    width: 107%;
     height: 50px;
   }
   main .blogs .blogs__top .blogs__top-button button {
@@ -629,7 +644,7 @@ main .blogs .blogs__bottom .blogs__bottom-iterm p {
 
 footer {
   width: 100%;
-  height: 1217px;
+  height: 100%;
   margin: 115px 0;
   background-color: #191a15;
 }
@@ -726,11 +741,11 @@ footer .bottom__top .bottom__top-right .bottom__top-right_form #mess {
 }
 footer .bottom__top .bottom__top-right .bottom__top-right_form #email {
   height: 50px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 footer .bottom__top .bottom__top-right .bottom__top-right_form #message {
   height: 80px;
-  border-radius: 5px;
+  border-radius: 20px;
   margin-top: 5%;
 }
 footer .bottom__top .bottom__top-right button {
@@ -778,6 +793,10 @@ footer .bottom__infor .bottom__infor-iterm li:hover {
   color: #ffc728;
 }
 @media screen and (max-width: 1240px) {
+  footer footer {
+    width: 100%;
+    height: 1000px;
+  }
   footer .bottom__top {
     flex-direction: column;
     width: 100%;
@@ -827,6 +846,10 @@ footer .bottom__infor .bottom__infor-iterm li:hover {
   footer .bottom__top .bottom__top-right .bottom__top-right_logo h2 {
     margin-left: 0%;
   }
+  footer .bottom__top .bottom__top-right .bottom__top-right_form {
+    width: 330px;
+    height: 250px;
+  }
   footer .bottom__top .bottom__top-right button {
     margin-top: 10%;
   }
@@ -835,12 +858,12 @@ footer .bottom__infor .bottom__infor-iterm li:hover {
   }
   footer .bottom__infor {
     background-color: #191a15;
-    margin: 0%;
-    height: 367px;
+    margin: 70% 0%;
   }
   footer .bottom__infor .bottom__infor-iterm {
     margin-left: 20%;
     margin-top: 30%;
+    font-size: 12px;
   }
 }
 
