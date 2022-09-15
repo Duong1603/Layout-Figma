@@ -2,7 +2,7 @@
 @import "./variable";
 footer {
     @include size(100%);
-    margin: 115px 0;
+    margin: 115px 0 0 0;
     @include bgc($font-big-color);
     & .bottom__top {
         @include bgc($font-big-color);
@@ -207,7 +207,7 @@ footer {
         }
         & .bottom__infor {
             @include bgc($font-big-color);
-            margin: 70% 0%;
+            margin: 70% 0 0 0;
             & .bottom__infor-iterm {
                 margin-left: 20%;
                 margin-top: 30%;

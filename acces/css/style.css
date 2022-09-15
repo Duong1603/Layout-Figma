@@ -34,6 +34,23 @@ header .nav .nav__logo h1 {
   letter-spacing: 2px;
   color: #37b182;
 }
+@keyframes fade {
+  20% {
+    color: #37b182;
+  }
+  40% {
+    color: rgb(250, 100, 200);
+  }
+  60% {
+    color: #ffc728;
+  }
+  80% {
+    color: rgb(171, 161, 100);
+  }
+  100% {
+    color: rgb(246, 255, 0);
+  }
+}
 header .nav .nav__menu-pc .nav__list {
   width: 100%;
   display: flex;
@@ -319,7 +336,8 @@ main .product .product__images .product__images-person {
     height: 100%;
   }
   main .product .product__word h1 {
-    font-size: 300%;
+    line-height: 1.2;
+    font-size: 45px;
   }
   main .product .product__word p {
     width: 100%;
@@ -615,6 +633,7 @@ main .blogs .blogs__bottom .blogs__bottom-iterm p {
   }
   main .blogs .blogs__top .blogs__top-button {
     margin-top: 5%;
+    margin-bottom: 50px;
     width: 107%;
     height: 50px;
   }
@@ -645,7 +664,7 @@ main .blogs .blogs__bottom .blogs__bottom-iterm p {
 footer {
   width: 100%;
   height: 100%;
-  margin: 115px 0;
+  margin: 115px 0 0 0;
   background-color: #191a15;
 }
 footer .bottom__top {
@@ -858,7 +877,7 @@ footer .bottom__infor .bottom__infor-iterm li:hover {
   }
   footer .bottom__infor {
     background-color: #191a15;
-    margin: 70% 0%;
+    margin: 70% 0 0 0;
   }
   footer .bottom__infor .bottom__infor-iterm {
     margin-left: 20%;

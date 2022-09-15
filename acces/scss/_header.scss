@@ -18,23 +18,23 @@ header {
                 margin-top: 5%;
                 letter-spacing: 2px;
                 color: $main_color;
-                // @include keyframes(fade) {
-                //     20% {
-                //         color: $main_color;
-                //     }
-                //     40% {
-                //         color: rgb(250, 100, 200);
-                //     }
-                //     60% {
-                //         color: $start-color;
-                //     }
-                //     80% {
-                //         color: rgba(171, 161, 100, 1);
-                //     }
-                //     100% {
-                //         color: rgb(246, 255, 0);
-                //     }
-                // }
+                @include keyframes(fade) {
+                    20% {
+                        color: $main_color;
+                    }
+                    40% {
+                        color: rgb(250, 100, 200);
+                    }
+                    60% {
+                        color: $start-color;
+                    }
+                    80% {
+                        color: rgba(171, 161, 100, 1);
+                    }
+                    100% {
+                        color: rgb(246, 255, 0);
+                    }
+                }
             }
         }
         & .nav__menu-pc {
